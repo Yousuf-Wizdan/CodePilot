@@ -241,7 +241,7 @@ importers:
         specifier: ^9.0.3
         version: 9.0.3
       mongoose:
-        specifier: ^9.6.2
+        specifier: ^9.7.0
         version: 9.7.0
       morgan:
         specifier: ^1.10.1

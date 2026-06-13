@@ -48,7 +48,7 @@
     "express": "^5.2.1",
     "helmet": "^8.2.0",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.6.2",
+    "mongoose": "^9.7.0",
     "morgan": "^1.10.1",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",

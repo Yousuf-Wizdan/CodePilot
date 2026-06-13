@@ -5,6 +5,7 @@ import routes from './routes'
 import cookieParser from 'cookie-parser';
 import { asyncHandler } from './middlewares/asyncHandler.middleware';
 import { errorHandler } from './middlewares/errorHandler.middleware';
+import { connectDataBase } from './config/database.config';
 
 const app = express();
 
@@ -30,5 +31,6 @@ app.use('/api', routes);
 app.use(errorHandler);
 
 app.listen(envConfig.PORT, async () => {
+    await connectDataBase();
     console.log(`Server is Running on http://localhost:${envConfig.PORT} in ${envConfig.NODE_ENV} mode`);
 })
