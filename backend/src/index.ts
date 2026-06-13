@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 import { asyncHandler } from './middlewares/asyncHandler.middleware';
 import { errorHandler } from './middlewares/errorHandler.middleware';
 import { connectDataBase } from './config/database.config';
+import passport from 'passport';
 
 const app = express();
 
@@ -13,10 +14,13 @@ const app = express();
 app.use(cors({
     origin: envConfig.FRONTEND_ORIGIN,
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(passport.initialize());
 
 app.get("/health", asyncHandler(async (req, res) => {
     res.json({
