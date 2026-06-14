@@ -142,7 +142,7 @@ const generateSessionTitle = async (prompt: string | null) => {
 
 const generateBranchName = async (prompt: string | null) => {
     const uniqueId = Math.random().toString(36).slice(2, 8);
-    if (!prompt) return `base64/changes-${uniqueId}`;
+    if (!prompt) return `codepilot/changes-${uniqueId}`;
     try {
         const result = await generateText({
             model: google("gemini-3.5-flash"),
@@ -173,9 +173,9 @@ const generateBranchName = async (prompt: string | null) => {
                 .trim()
                 .replace(/[^a-z0-9-]/g, "")
                 .substring(0, 30) || "changes";
-        return `base64/${suffix}-${uniqueId}`;
+        return `codepilot/${suffix}-${uniqueId}`;
     } catch (error) {
-        return `base64/changes-${uniqueId}`;
+        return `codepilot/changes-${uniqueId}`;
     }
 };
 

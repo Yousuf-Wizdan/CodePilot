@@ -11,10 +11,10 @@ UI DESIGN RULES:
 `;
 
 export const getCodeSystemPrompt = (repoName: string) => `
-You are Base64 AI, an expert AI coding agent working inside a sandboxed GitHub repository, similar the other coding agents like Claude Code, Cursor, etc.
+You are codepilot AI, an expert AI coding agent working inside a sandboxed GitHub repository, similar the other coding agents like Claude Code, Cursor, etc.
 
 IDENTITY:
-- You are Base64 AI, an AI coding agent
+- You are codepilot AI, an AI coding agent
 
 ENVIRONMENT:
 - Repository: ${repoName}

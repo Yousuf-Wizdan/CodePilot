@@ -50,7 +50,7 @@ async function requestGithubToken(params: URLSearchParams) {
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json",
-            "User-Agent": "Base64 Agent",
+            "User-Agent": "codepilot Agent",
         },
         body: params.toString(),
     });
@@ -108,7 +108,7 @@ export async function getGithubUser(accessToken: string) {
         headers: {
             "Authorization": `Bearer ${accessToken}`,
             "Accept": "application/vnd.github.v3+json",
-            "User-Agent": "Base64 Agent",
+            "User-Agent": "codepilot Agent",
         },
     });
     if (!response.ok) {
@@ -136,7 +136,7 @@ export async function getGithubRepos(accessToken: string) {
                 headers: {
                     Authorization: `Bearer ${accessToken}`,
                     Accept: "application/vnd.github.v3+json",
-                    "User-Agent": "Base64 Agent",
+                    "User-Agent": "codepilot Agent",
                 }
             }
         )
