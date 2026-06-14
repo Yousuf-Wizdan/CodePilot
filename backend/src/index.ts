@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(passport.initialize());
 
-app.get("/health", asyncHandler(async (req, res) => {
+app.get("/", asyncHandler(async (req, res) => {
     res.json({
         message: "Server is Running",
         status: "healthy"
