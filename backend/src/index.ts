@@ -7,6 +7,7 @@ import { asyncHandler } from './middlewares/asyncHandler.middleware';
 import { errorHandler } from './middlewares/errorHandler.middleware';
 import { connectDataBase } from './config/database.config';
 import passport from 'passport';
+import "dotenv/config";
 
 const app = express();
 

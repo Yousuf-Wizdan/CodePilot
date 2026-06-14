@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"@ai-sdk/google": "^3.0.82",
+		"@ai-sdk/mistral": "^3.0.39"
+	}
+}
